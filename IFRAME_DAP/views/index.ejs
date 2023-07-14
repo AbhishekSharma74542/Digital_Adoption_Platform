@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IFrame Generator</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+
+    <div>
+      <form action="">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name..."
+        />
+
+        <label for="lname">Last Name</label>
+        <input
+          onfocus="onFocusLastName(this)"
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name..."
+        />
+
+        <label for="country">Country</label>
+        <select id="country" name="country" onfocus="onFocusCountry(this)">
+          <option value="france">France</option>
+          <option value="germany">Germany</option>
+          <option value="italy">Italy</option>
+          <option value="spain">Spain</option>
+          <option value="uk">UK</option>
+        </select>
+
+        <section id="radioButtons">
+          <input type="radio" id="male" name="gender" value="male" onfocus="onFocusGender(this)" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br />
+        </section>
+
+        <input type="submit" value="Submit" onfocus="onFocusInSubmit(this)" onclick="onSubmit(this)"/>
+        <h2 id="announcements"></h2>
+      </form>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
